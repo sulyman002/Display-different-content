@@ -9,6 +9,7 @@
 :root {
     --background-color: lightblue;
     --pry-card-color: rgb(135, 212, 238);
+    --light-color: #fff;
     --scnd-bg-color: whitesmoke;
     /* font properties */
     --fs-400: clamp(.75rem, 1.5vw, 1.2rem);
@@ -135,16 +136,44 @@ body {
     width: 33.3333%;
     justify-content: center;
     text-align: center;
+    cursor: pointer;
 
     /* justify-content: center; */
     /* background-color: black; */
 }
 
-.history {
+.history:hover {
+    background-color: var(--light-color);
+    height: inherit;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: var(--fs-400);
+}
+
+.vision:hover {
+    background-color: var(--light-color);
+    height: inherit;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: var(--fs-400);
+}
+
+.goals:hover {
+    background-color: var(--light-color);
+    height: inherit;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: var(--fs-400);
+}
+
+/* .history {
     background-color: bisque;
     height: inherit;
     align-items: center;
-}
+} */
 
 .links_content {
     display: flex;

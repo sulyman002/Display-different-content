@@ -1,11 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto Mono", monospace;;
+    font-family: "Roboto Mono", monospace;
+    ;
 }
 
-:root{
+:root {
     --background-color: lightblue;
     --pry-card-color: rgb(135, 212, 238);
     --scnd-bg-color: whitesmoke;
@@ -20,13 +21,17 @@
     --fw-900: 900;
     --fw-lighter: lighter;
 
-    /* spacing properties */
+    /* other properties */
+
+    --container-height: 380px;
+    --container-links-height: 50px;
+    --content-height: 330px;
     /* color properties */
 
 }
 
 
-body{
+body {
     background-color: var(--background-color);
     display: flex;
     flex-direction: column;
@@ -36,7 +41,7 @@ body{
     height: 100vh;
 }
 
-.tittle{
+.tittle {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -44,11 +49,11 @@ body{
     font-weight: var(--fw-lighter);
 }
 
-.tittle p{
+.tittle p {
     margin-bottom: 70px;
 }
 
-.card_content{
+.card_content {
     display: flex;
     justify-content: center;
     gap: 60px;
@@ -57,59 +62,110 @@ body{
     width: 100%;
 }
 
-.card{
+.history_card {
     display: flex;
     width: 45%;
     background-color: var(--pry-card-color);
+    height: var(--container-height);
+    border: none;
+    border-radius: 15px;
     /* flex-grow: 1; */
 }
 
-.card_links{
+.vision_card {
+    display: none;
+    width: 45%;
+    background-color: var(--pry-card-color);
+    height: var(--container-height);
+    border: none;
+    border-radius: 15px;
+    /* flex-grow: 1; */
+}
+
+.goals_card {
+    display: none;
+    width: 45%;
+    background-color: var(--pry-card-color);
+    height: var(--container-height);
+    border: none;
+    border-radius: 15px;
+    /* flex-grow: 1; */
+}
+
+.history_card img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.vision_card img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.goals_card img {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+.card_links {
     display: flex;
     width: 45%;
     flex-direction: column;
     background-color: var(--pry-card-color);
 }
 
-.links{
+.links {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px
+    height: var(--container-links-height);
 
 }
 
-.history, .vision, .goals{
+.history,
+.vision,
+.goals {
     display: flex;
     width: 33.3333%;
     justify-content: center;
     text-align: center;
-    
+
     /* justify-content: center; */
     /* background-color: black; */
 }
 
-.history{
+.history {
     background-color: bisque;
     height: inherit;
     align-items: center;
 }
 
-.links_content{
+.links_content {
     display: flex;
     background-color: var(--scnd-bg-color);
 
 }
 
-.history_content{
-    display: none;
+.history_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 30px;
+    height: var(--content-height);
 }
 
 .vision-content {
     display: none;
     flex-direction: column;
     padding: 30px;
+    justify-content: centert;
+    overflow: hidden;
     /* flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -118,9 +174,10 @@ body{
 }
 
 .goals_content {
-    display:flex;
+    display: none;
     flex-direction: column;
     padding: 30px;
+    justify-content: center;
     /* flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -128,9 +185,59 @@ body{
     height: 100%; */
 }
 
-.content_name{
+.content_name {
     font-size: var(--fs-600);
     font-weight: var(--fw-900);
     color: black;
     margin-bottom: 15px;
+}
+
+.content_1 {
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    color: black;
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: justify;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .card_content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .history_card,
+    .vision_card,
+    .goals_card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .card_links {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .links {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .history,
+    .vision,
+    .goals {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .links_content {
+        flex-direction: column;
+    }
+
 }

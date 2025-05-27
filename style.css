@@ -48,6 +48,7 @@ body {
     gap: 10px;
     text-align: center;
     font-weight: var(--fw-lighter);
+    margin-top: 100px;
 }
 
 .tittle h2 {

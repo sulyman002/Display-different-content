@@ -39,7 +39,7 @@ body {
     justify-content: center;
     /* align-items: center; */
     width: 100vw;
-    height: 150vh;
+    height: auto;
 }
 
 .tittle {

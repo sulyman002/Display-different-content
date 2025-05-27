@@ -24,9 +24,9 @@
 
     /* other properties */
 
-    --container-height: 380px;
-    --container-links-height: 50px;
-    --content-height: 330px;
+    --container-height: 400px;
+    --container-links-height: 60px;
+    --content-height: 340px;
     /* color properties */
 
 }
@@ -39,7 +39,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
 }
 
 .tittle {
@@ -64,7 +64,7 @@ body {
 }
 
 .history_card {
-    display: flex;
+    display: none;
     width: 45%;
     background-color: var(--pry-card-color);
     height: var(--container-height);
@@ -117,8 +117,9 @@ body {
 .card_links {
     display: flex;
     width: 45%;
+    gap: 5px;
     flex-direction: column;
-    background-color: var(--pry-card-color);
+    /* background-color: var(--pry-card-color); */
 }
 
 .links {
@@ -126,6 +127,9 @@ body {
     justify-content: space-between;
     align-items: center;
     height: var(--container-links-height);
+    border-radius: 10px;
+    border: none;
+    background-color: var(--pry-card-color);
 
 }
 
@@ -142,13 +146,14 @@ body {
     /* background-color: black; */
 }
 
+
 .history:hover {
     background-color: var(--light-color);
     height: inherit;
     align-items: center;
     border-radius: 5px;
     font-weight: bold;
-    font-size: var(--fs-400);
+    font-size: var(--fs-600);
 }
 
 .vision:hover {
@@ -157,7 +162,7 @@ body {
     align-items: center;
     border-radius: 5px;
     font-weight: bold;
-    font-size: var(--fs-400);
+    font-size: var(--fs-600);
 }
 
 .goals:hover {
@@ -166,8 +171,9 @@ body {
     align-items: center;
     border-radius: 5px;
     font-weight: bold;
-    font-size: var(--fs-400);
+    font-size: var(--fs-600);
 }
+
 
 /* .history {
     background-color: bisque;
@@ -178,15 +184,17 @@ body {
 .links_content {
     display: flex;
     background-color: var(--scnd-bg-color);
+    border-radius: 10px;
 
 }
 
 .history_content {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     padding: 30px;
     height: var(--content-height);
+    overflow: auto;
 }
 
 .vision-content {
@@ -194,12 +202,9 @@ body {
     flex-direction: column;
     padding: 30px;
     justify-content: centert;
-    overflow: hidden;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%; */
+    overflow: auto;
+    height: var(--content-height);
+
 }
 
 .goals_content {
@@ -207,6 +212,8 @@ body {
     flex-direction: column;
     padding: 30px;
     justify-content: center;
+    overflow: hidden;
+    height: var(--content-height);
   
 }
 
@@ -233,7 +240,8 @@ body {
 @media screen and (max-width: 768px) {
 
     .card_content {
-        flex-direction: column;
+      display: flex;
+        flex-direction: column-reverse;
         align-items: center;
     }
 
@@ -247,6 +255,7 @@ body {
     .card_links {
         width: 90%;
         margin-bottom: 20px;
+  
     }
     .links {
         flex-direction: column;
@@ -258,6 +267,7 @@ body {
     .goals {
         width: 100%;
         height: auto;
+        padding: 20px;
         margin-bottom: 10px;
     }
 
